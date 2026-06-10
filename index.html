@@ -70,24 +70,72 @@
 </head>
 <body class="antialiased">
 <!-- BEGIN: MainHeader -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+<header class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
 <nav class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-<div class="flex items-center">
-<!-- Brand Name based on logo in image -->
-<a href="#hero"><img src="assets/img/kull-mining-white.png" alt="kull-mining" style="max-width: 5rem;"></a>
-</div>
-<!-- Mobile Meeting Button -->
-<a href="#nosotros">Nosotros</a>
-      <a href="#soluciones">Soluciones</a>
-      <a href="#casos-uso">Casos de uso</a>
-      <a href="#porque-kull">Por qué Kull</a>
-      <a href="#contact">Contacto</a>
+  <!-- Logo -->
+  <a href="#hero" class="flex-shrink-0">
+    <img src="assets/img/kull-mining-white.png" alt="kull-mining" style="max-width: 5rem;">
+  </a>
 
-<a class="bg-kull-red hover:bg-red-700 text-white text-xs font-bold px-2 py-2 rounded transition-colors  tracking-wider" href="#contact">
-        Agenda una reunión
-      </a>
+  <!-- Desktop Nav -->
+  <div class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+    <a href="#nosotros" class="hover:text-white transition-colors">Nosotros</a>
+    <a href="#soluciones" class="hover:text-white transition-colors">Soluciones</a>
+    <a href="#casos-uso" class="hover:text-white transition-colors">Casos de uso</a>
+    <a href="#porque-kull" class="hover:text-white transition-colors">Por qué Kull</a>
+    <a href="#contact" class="hover:text-white transition-colors">Contacto</a>
+  </div>
+
+  <!-- Desktop CTA -->
+  <a class="hidden md:inline-block bg-kull-red hover:bg-red-700 text-white text-xs font-bold px-4 py-2 rounded transition-colors tracking-wider" href="#contact">
+    Agenda una reunión
+  </a>
+
+  <!-- Hamburger Button (mobile) -->
+  <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus:outline-none" aria-label="Abrir menú">
+    <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="bar1"></span>
+    <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="bar2"></span>
+    <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="bar3"></span>
+  </button>
 </nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-black/95 border-t border-white/10 px-4 py-6 flex flex-col gap-4">
+  <a href="#nosotros" class="mobile-link text-white text-base font-medium py-2 border-b border-white/10">Nosotros</a>
+  <a href="#soluciones" class="mobile-link text-white text-base font-medium py-2 border-b border-white/10">Soluciones</a>
+  <a href="#casos-uso" class="mobile-link text-white text-base font-medium py-2 border-b border-white/10">Casos de uso</a>
+  <a href="#porque-kull" class="mobile-link text-white text-base font-medium py-2 border-b border-white/10">Por qué Kull</a>
+  <a href="#contact" class="mobile-link text-white text-base font-medium py-2 border-b border-white/10">Contacto</a>
+  <a href="#contact" class="mobile-link mt-2 bg-kull-red hover:bg-red-700 text-white font-bold py-3 px-6 rounded text-center transition-colors tracking-wider">
+    Agenda una reunión
+  </a>
+</div>
 </header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    const open = !menu.classList.contains('hidden');
+    bar1.style.transform = open ? 'translateY(8px) rotate(45deg)' : '';
+    bar2.style.opacity = open ? '0' : '1';
+    bar3.style.transform = open ? 'translateY(-8px) rotate(-45deg)' : '';
+  });
+
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      bar1.style.transform = '';
+      bar2.style.opacity = '1';
+      bar3.style.transform = '';
+    });
+  });
+</script>
 <!-- END: MainHeader -->
 <main>
 <!-- BEGIN: HeroSection -->
