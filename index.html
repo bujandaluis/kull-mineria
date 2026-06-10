@@ -51,9 +51,21 @@
     }
     /* Mobile-specific adjustments for industrial background */
     .hero-bg {
+      position: relative;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
       background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('./assets/img/foto-hero-new.png');
       background-size: cover;
-      background-position: 50% 0%; /* Aligned to the top mine visual */
+      background-position: 50% 0%;
+      transform: scaleX(-1);
+      z-index: 0;
+    }
+    .hero-bg > * {
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
