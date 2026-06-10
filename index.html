@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kull - Tecnología privada para minería e industria</title>
+<meta content="Soluciones de automatización, visión computacional e inteligencia artificial para minería e industria." name="description"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'kull-red': '#D31B2A',
+            'kull-dark': '#0A0A0A',
+            'kull-gray': '#111111',
+            'kull-card': '#161616',
+            'kull-border': '#2A2A2A',
+            'kull-text-muted': '#A0A0A0',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-utilities">
+    body {
+      background-color: #1D1E20;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+    }
+    .text-gradient-red {
+      background: linear-gradient(to right, #D31B2A, #E17322);
+
+      -webkit-text-fill-color: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #D31B2A;
+      border-radius: 10px;
+    }
+    /* Mobile-specific adjustments for industrial background */
+    .hero-bg {
+      background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('./assets/img/foto-hero.jpg');
+      background-size: cover;
+      background-position: 50% 0%; /* Aligned to the top mine visual */
+    }
+  </style>
+</head>
+<body class="antialiased">
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+<nav class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+<div class="flex items-center">
+<!-- Brand Name based on logo in image -->
+<a href="#hero"><img src="assets/img/kull-mining.png" alt="kull-mining" style="max-width: 5rem; padding: 15px;"></a>
+</div>
+<!-- Mobile Meeting Button -->
+<a href="#nosotros">Nosotros</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#casos-uso">Casos de uso</a>
+      <a href="#porque-kull">Por qué Kull</a>
+      <a href="#contact">Contacto</a>
+
+<a class="bg-kull-red hover:bg-red-700 text-white text-xs font-bold px-2 py-2 rounded transition-colors  tracking-wider" href="#contact">
+        Agenda una reunión
+      </a>
+</nav>
+</header>
+<!-- END: MainHeader -->
+<main>
+<!-- BEGIN: HeroSection -->
+<section class="hero-bg pt-32 pb-20 px-4 min-h-[80vh] flex flex-col " id="hero">
+<div class="max-w-3xl mx-auto text-left">
+<p class="text-kull-red pt-10 font-bold text-xs uppercase tracking-[0.2em] mb-4">
+          IA · Automatización · Visión Computacional
+        </p>
+<h1 class="text-4xl py-5 md:text-6xl font-bold leading-tight mb-6">
+          Tecnología privada para <span class="text-kull-red">minería e industria</span>
+</h1>
+<p class="text-lg text-gray-300 mb-8 max-w-xl">
+          Desarrollamos soluciones de automatización, visión computacional e inteligencia artificial para optimizar procesos críticos en operaciones mineras e industriales.
+        </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-kull-red hover:bg-red-700 text-white font-bold py-4 px-8 rounded flex items-center justify-center transition-all" href="#contact">
+            Agenda una reunión <span class="ml-2">→</span>
+</a>
+<a class="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded border border-white/20 backdrop-blur-sm transition-all text-center" href="#soluciones">
+            Ver soluciones
+          </a>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: AboutUs -->
+<section class="py-20 px-4 bg-kull-dark" id="nosotros">
+<div class="max-w-7xl mx-auto">
+<p class="text-gray-500 text-xs font-semibold uppercase tracking-widest mb-4">Quiénes somos</p>
+<h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Socio tecnológico estratégico para <span class="text-kull-red">operaciones críticas</span>
+</h2>
+<p class="text-gray-400 mb-12 max-w-2xl">
+          Kull es una compañía privada de tecnología enfocada en resolver problemas reales de la minería y la industria. Entendemos que cada operación es única, y por eso desarrollamos soluciones que se adaptan a la realidad del terreno, no al revés.
+        </p>
+<!-- About Feature Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1 -->
+<div class="bg-kull-card border border-kull-border p-8 rounded-sm">
+<h3 class="text-lg font-bold mb-3">Soluciones a medida</h3>
+<p class="text-sm text-gray-400 leading-relaxed">No vendemos software genérico. Cada solución se diseña y construye en función de la operación real del cliente.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-kull-card border border-kull-border p-8 rounded-sm">
+<h3 class="text-lg font-bold mb-3">Visión computacional + IA</h3>
+<p class="text-sm text-gray-400 leading-relaxed">Combinamos cámaras, sensores y algoritmos de IA para detectar patrones, anomalías y oportunidades de mejora en tiempo real.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-kull-card border border-kull-border p-8 rounded-sm">
+<h3 class="text-lg font-bold mb-3">Integración con lo existente</h3>
+<p class="text-sm text-gray-400 leading-relaxed">Nos conectamos con los sistemas, PLCs, cámaras y redes que ya opera tu planta. Sin reemplazar, sino potenciando.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-kull-card border border-kull-border p-8 rounded-sm">
+<h3 class="text-lg font-bold mb-3">Tecnología privada</h3>
+<p class="text-sm text-gray-400 leading-relaxed">Toda solución se despliega on-premise o en infraestructura privada del cliente. Los datos nunca salen de tu red.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutUs -->
+<!-- BEGIN: SolutionsBento -->
+<section class="py-20 px-4 bg-black" id="soluciones">
+<div class="max-w-7xl mx-auto text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4">
+          Tecnología aplicada a<br/>
+<span class="text-kull-red">problemas reales</span>
+</h2>
+<p class="text-gray-400 max-w-xl mx-auto">Cada solución se desarrolla para resolver un desafío operacional concreto, con impacto medible en productividad, seguridad y continuidad.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Item 1 -->
+<div class="bg-kull-card border border-kull-border p-10 flex flex-col h-full group hover:border-kull-red transition-colors">
+<div class="mb-8 text-kull-red">
+<!-- Icon placeholder -->
+<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-4">Visión computacional para cintas transportadoras</h3>
+<p class="text-gray-400 text-sm mb-6 flex-grow">Detección de materiales anómalos, sobrecarga y objetos extraños mediante cámaras e IA en tiempo real.</p>
+<p class="text-xs font-bold text-kull-red uppercase tracking-tighter">REDUCE DETENCIONES NO PROGRAMADAS</p>
+</div>
+<!-- Item 2 -->
+<div class="bg-kull-card border border-kull-border p-10 flex flex-col h-full group hover:border-kull-red transition-colors">
+<div class="mb-8 text-kull-red">
+<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-4">Monitoreo inteligente de chancadores</h3>
+<p class="text-gray-400 text-sm mb-6 flex-grow">Análisis visual para detectar irregularidades en la alimentación, rocas sobredimensionadas y riesgo de bloqueo.</p>
+<p class="text-xs font-bold text-kull-red uppercase tracking-tighter">OPTIMIZA THROUGHPUT Y PROCESOS AGUAS ABAJO</p>
+</div>
+<!-- Item 3 -->
+<div class="bg-kull-card border border-kull-border p-10 flex flex-col h-full group hover:border-kull-red transition-colors">
+<div class="mb-8 text-kull-red">
+<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-4">Detección de costramiento en piscinas de litio</h3>
+<p class="text-gray-400 text-sm mb-6 flex-grow">Análisis de imagen para identificar costras y condiciones superficiales irregulares.</p>
+<p class="text-xs font-bold text-kull-red uppercase tracking-tighter">MEJOR CONTROL Y RECUPERACIÓN OPERACIONAL</p>
+</div>
+<!-- Item 4 -->
+<div class="bg-kull-card border border-kull-border p-10 flex flex-col h-full group hover:border-kull-red transition-colors">
+<div class="mb-8 text-kull-red">
+<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-4">Automatización industrial a medida</h3>
+<p class="text-gray-400 text-sm mb-6 flex-grow">Diseño e implementación de sistemas de control y automatización adaptados a cada proceso específico.</p>
+<p class="text-xs font-bold text-kull-red uppercase tracking-tighter">EFICIENCIA OPERACIONAL MEDIBLE</p>
+</div>
+<!-- Item 5 -->
+<div class="bg-kull-card border border-kull-border p-10 flex flex-col h-full group hover:border-kull-red transition-colors">
+<div class="mb-8 text-kull-red">
+<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7c-2 0-3 1-3 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M9 12h6m-6 4h6m-6-8h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-4">Integración de datos operacionales</h3>
+<p class="text-gray-400 text-sm mb-6 flex-grow">Conexión de fuentes de datos heterogéneas: sensores, PLCs, SCADA, cámaras y sistemas legados.</p>
+<p class="text-xs font-bold text-kull-red uppercase tracking-tighter">VISIBILIDAD COMPLETA DE LA OPERACIÓN</p>
+</div>
+<!-- Item 6 -->
+<div class="bg-kull-card border border-kull-border p-10 flex flex-col h-full group hover:border-kull-red transition-colors">
+<div class="mb-8 text-kull-red">
+<svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-4">Plataformas privadas de monitoreo y alertas</h3>
+<p class="text-gray-400 text-sm mb-6 flex-grow">Dashboards operacionales privados con alertas inteligentes y análisis histórico.</p>
+<p class="text-xs font-bold text-kull-red uppercase tracking-tighter">DECISIONES INFORMADAS EN TIEMPO REAL</p>
+</div>
+</div>
+</section>
+<!-- END: SolutionsBento -->
+<!-- BEGIN: ImpactSection -->
+<section class="py-20 px-4 bg-kull-dark" id="casos-uso">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4">Impacto real en <span class="text-kull-red">operaciones mineras</span></h2>
+<p class="text-gray-400 max-w-2xl mx-auto">Ejemplos concretos de cómo la tecnología Kull resuelve desafíos operacionales críticos con resultados medibles.</p>
+</div>
+<div class="space-y-4">
+<!-- Table Header - Desktop Only (Hidden on mobile for better UI) -->
+<div class="hidden md:grid grid-cols-12 gap-8 px-8 py-4 text-xs font-bold uppercase text-gray-500 border-b border-kull-border">
+<div class="col-span-4">Visión Computacional</div>
+<div class="col-span-4">Solución</div>
+<div class="col-span-4">Valor</div>
+</div>
+<!-- Impact Row 1 -->
+<div class="bg-kull-card border border-kull-border rounded-lg overflow-hidden p-6 md:p-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+<div class="md:col-span-4">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-2 md:hidden">Visión Computacional</p>
+<h3 class="text-xl font-bold mb-2">Cintas transportadoras</h3>
+<p class="text-sm text-gray-400">Las cintas operan 24/7 y las fallas no detectadas generan detenciones costosas, daño en correas y riesgos de seguridad.</p>
+</div>
+<div class="md:col-span-4">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-2">Solución</p>
+<p class="text-sm text-gray-300">IA + cámaras para detectar patrones anómalos de material, sobrecarga, objetos extraños y riesgo de daño en la correa en tiempo real.</p>
+</div>
+<div class="md:col-span-4">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-2">Valor</p>
+<ul class="text-sm text-gray-300 space-y-1">
+<li>• Reducción de detenciones no programadas</li>
+<li>• Mejora en continuidad operacional</li>
+<li>• Alertas predictivas antes de la falla</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Impact Row 2 -->
+<div class="bg-kull-card border border-kull-border rounded-lg overflow-hidden p-6 md:p-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+<div class="md:col-span-4">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-2 md:hidden">Monitoreo Inteligente</p>
+<h3 class="text-xl font-bold mb-2">Chancadores</h3>
+<p class="text-sm text-gray-400">La alimentación irregular, rocas sobredimensionadas y bloqueos reducen el throughput y generan paradas imprevistas.</p>
+</div>
+<div class="md:col-span-4">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-2">Solución</p>
+<p class="text-sm text-gray-300">Análisis visual continuo para detectar irregularidades en la alimentación, riesgo de bloqueo y condiciones de operación subóptimas.</p>
+</div>
+<div class="md:col-span-4">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-2">Valor</p>
+<ul class="text-sm text-gray-300 space-y-1">
+<li>• Mayor throughput sostenido</li>
+<li>• Reducción de paradas imprevistas</li>
+<li>• Optimización de procesamiento aguas abajo</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Impact Row 3 -->
+<div class="bg-kull-card border border-kull-border rounded-lg overflow-hidden p-6 md:p-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+<div class="md:col-span-4">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-2 md:hidden">Análisis de Imagen</p>
+<h3 class="text-xl font-bold mb-2">Piscinas de litio</h3>
+<p class="text-sm text-gray-400">El costramiento y las condiciones superficiales irregulares reducen la eficiencia de evaporación y la calidad de recuperación.</p>
+</div>
+<div class="md:col-span-4">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-2">Solución</p>
+<p class="text-sm text-gray-300">Análisis de imagen para detectar costras, cambios de color y condiciones superficiales que afecten el proceso de evaporación.</p>
+</div>
+<div class="md:col-span-4">
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-2">Valor</p>
+<ul class="text-sm text-gray-300 space-y-1">
+<li>• Mejor control del proceso de evaporación</li>
+<li>• Mayor tasa de recuperación de litio</li>
+<li>• Decisiones operacionales basadas en datos</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ImpactSection -->
+<!-- BEGIN: ReasonsSection -->
+<section class="py-20 px-4 bg-black" id="porque-kull">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<p class="text-gray-500 text-xs font-bold uppercase tracking-widest mb-2">Por qué Kull</p>
+<h2 class="text-4xl md:text-5xl font-bold">Razones para <span class="text-kull-red">trabajar con nosotros</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-8">
+<!-- Reason 1 -->
+<div class="flex items-start">
+<div class="text-kull-red mr-4 mt-1">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="font-bold mb-2">Soluciones privadas y a medida</h4>
+<p class="text-sm text-gray-400">Cada proyecto se diseña desde cero para tu operación. Sin licencias genéricas.</p>
+</div>
+</div>
+<!-- Reason 2 -->
+<div class="flex items-start">
+<div class="text-kull-red mr-4 mt-1">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="font-bold mb-2">Enfoque en minería e industria</h4>
+<p class="text-sm text-gray-400">Conocemos los desafíos operacionales reales del sector. No improvisamos.</p>
+</div>
+</div>
+<!-- Reason 3 -->
+<div class="flex items-start">
+<div class="text-kull-red mr-4 mt-1">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="font-bold mb-2">Integración con operación real</h4>
+<p class="text-sm text-gray-400">Conectamos con tus sistemas, cámaras, PLCs y redes existentes.</p>
+</div>
+</div>
+<!-- Reason 4 -->
+<div class="flex items-start">
+<div class="text-kull-red mr-4 mt-1">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="font-bold mb-2">IA aplicada a problemas concretos</h4>
+<p class="text-sm text-gray-400">No vendemos IA como concepto. La aplicamos a problemas específicos con ROI claro.</p>
+</div>
+</div>
+<!-- Reason 5 -->
+<div class="flex items-start">
+<div class="text-kull-red mr-4 mt-1">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="font-bold mb-2">Rapidez de implementación</h4>
+<p class="text-sm text-gray-400">Equipos ágiles, metodología probada y foco en resultados tempranos.</p>
+</div>
+</div>
+<!-- Reason 6 -->
+<div class="flex items-start">
+<div class="text-kull-red mr-4 mt-1">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="font-bold mb-2">Escalabilidad y control de datos</h4>
+<p class="text-sm text-gray-400">Infraestructura privada. Tus datos nunca salen de tu red.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ReasonsSection -->
+<!-- BEGIN: CaseStudies -->
+<section class="py-20 px-4 bg-kull-dark overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4">Referencias de <span class="text-kull-red">proyectos ejecutados</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Case 1 -->
+<div class="bg-kull-card border border-kull-border p-8 rounded-lg relative group">
+<a class="absolute top-6 right-6 text-gray-600 group-hover:text-white transition-colors" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-width="2"></path></svg>
+</a>
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-4">Monitoreo Predictivo</p>
+<h3 class="text-xl font-bold mb-4">Monitoreo predictivo de proceso crítico</h3>
+<p class="text-sm text-gray-400 mb-8">Implementación de sistema de visión computacional e IA para monitoreo continuo de un proceso minero crítico, logrando detección temprana de anomalías y reducción significativa de paradas no programadas.</p>
+<div class="space-y-2 border-t border-kull-border pt-6">
+<div class="text-[10px] font-bold text-gray-400 uppercase">• Detección temprana de fallas</div>
+<div class="text-[10px] font-bold text-gray-400 uppercase">• Reducción de downtime</div>
+<div class="text-[10px] font-bold text-gray-400 uppercase">• ROI en menos de 6 meses</div>
+</div>
+</div>
+<!-- Case 2 -->
+<div class="bg-kull-card border border-kull-border p-8 rounded-lg relative group">
+<a class="absolute top-6 right-6 text-gray-600 group-hover:text-white transition-colors" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-width="2"></path></svg>
+</a>
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-4">Visión Artificial</p>
+<h3 class="text-xl font-bold mb-4">Automatización de operación con visión artificial</h3>
+<p class="text-sm text-gray-400 mb-8">Desarrollo de sistema de análisis visual automatizado para control de calidad en línea de producción industrial, eliminando inspección manual y mejorando consistencia del producto.</p>
+<div class="space-y-2 border-t border-kull-border pt-6">
+<div class="text-[10px] font-bold text-gray-400 uppercase">• Inspección 24/7 sin intervención</div>
+<div class="text-[10px] font-bold text-gray-400 uppercase">• Mejora en calidad de producto</div>
+<div class="text-[10px] font-bold text-gray-400 uppercase">• Escalable a múltiples líneas</div>
+</div>
+</div>
+<!-- Case 3 -->
+<div class="bg-kull-card border border-kull-border p-8 rounded-lg relative group">
+<a class="absolute top-6 right-6 text-gray-600 group-hover:text-white transition-colors" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-width="2"></path></svg>
+</a>
+<p class="text-[10px] text-gray-500 uppercase font-bold mb-4">Plataforma de Control</p>
+<h3 class="text-xl font-bold mb-4">Plataforma privada de control operacional</h3>
+<p class="text-sm text-gray-400 mb-8">Diseño y despliegue de plataforma de monitoreo centralizado con dashboards operacionales, alertas inteligentes e integración con múltiples fuentes de datos industriales.</p>
+<div class="space-y-2 border-t border-kull-border pt-6">
+<div class="text-[10px] font-bold text-gray-400 uppercase">• Visibilidad total de la operación</div>
+<div class="text-[10px] font-bold text-gray-400 uppercase">• Alertas en tiempo real</div>
+<div class="text-[10px] font-bold text-gray-400 uppercase">• Datos 100% privados</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CaseStudies -->
+<!-- BEGIN: ContactSection -->
+<section class="py-20 px-4 bg-black" id="contact">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-12">
+<p class="text-gray-500 text-xs font-bold uppercase tracking-widest mb-2">Contacto</p>
+<h2 class="text-4xl font-bold mb-4"><span class="text-kull-red">Conversemos</span> sobre tu operación</h2>
+<p class="text-gray-400">Evaluamos oportunidades en minería y entornos industriales. Cuéntanos tu desafío y exploremos cómo Kull puede ayudar.</p>
+</div>
+<form class="bg-kull-card border border-kull-border p-8 rounded-lg shadow-2xl">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label class="block text-xs font-bold text-gray-400 uppercase mb-2">Nombre</label>
+<input class="w-full bg-kull-dark border-kull-border focus:border-kull-red focus:ring-0 text-white rounded p-3 transition-all" placeholder="Tu nombre" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-gray-400 uppercase mb-2">Empresa</label>
+<input class="w-full bg-kull-dark border-kull-border focus:border-kull-red focus:ring-0 text-white rounded p-3 transition-all" placeholder="Nombre de la empresa" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-gray-400 uppercase mb-2">Cargo</label>
+<input class="w-full bg-kull-dark border-kull-border focus:border-kull-red focus:ring-0 text-white rounded p-3 transition-all" placeholder="Tu cargo" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-gray-400 uppercase mb-2">Email</label>
+<input class="w-full bg-kull-dark border-kull-border focus:border-kull-red focus:ring-0 text-white rounded p-3 transition-all" placeholder="correo@empresa.com" type="email"/>
+</div>
+<div class="md:col-span-2">
+<label class="block text-xs font-bold text-gray-400 uppercase mb-2">Teléfono</label>
+<input class="w-full bg-kull-dark border-kull-border focus:border-kull-red focus:ring-0 text-white rounded p-3 transition-all" placeholder="+56 9 1234 5678" type="tel"/>
+</div>
+<div class="md:col-span-2">
+<label class="block text-xs font-bold text-gray-400 uppercase mb-2">Mensaje</label>
+<textarea class="w-full bg-kull-dark border-kull-border focus:border-kull-red focus:ring-0 text-white rounded p-3 transition-all" placeholder="Cuéntanos sobre tu desafío operacional..." rows="4"></textarea>
+</div>
+</div>
+<button class="w-full md:w-auto bg-kull-red hover:bg-red-700 text-white font-bold py-4 px-12 rounded transition-all flex items-center justify-center" type="submit">
+            Conversar <span class="ml-2"></span>
+</button>
+</form>
+</div>
+</section>
+<!-- END: ContactSection -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="bg-kull-dark border-t border-kull-border pt-16 pb-8 px-4">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start mb-12 gap-10">
+<div class="max-w-md">
+<a href="#hero"><img src="assets/img/kull-mining.png" alt="kull-mining" style="max-width: 5rem; "></a>
+<p class="text-gray-500 text-sm mt-4">
+            IA, automatización y visión computacional para minería e industria.
+          </p>
+</div>
+<div class="flex flex-col items-start md:items-end gap-2">
+<a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="mailto:contacto@kull.cl">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2"></path></svg>
+            info@kull.cl
+          </a>
+</div>
+</div>
+<div class="border-t border-kull-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-600 text-[10px] uppercase tracking-widest">© 2024 KULL. TODOS LOS DERECHOS RESERVADOS.</p>
+<div class="flex gap-6">
+
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+</body></html>
