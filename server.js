@@ -50,8 +50,11 @@ app.post('/api/contact', async (req, res) => {
     await transporter.sendMail(mailOptions);
     res.json({ success: true, message: 'Mensaje enviado correctamente.' });
   } catch (err) {
-    console.error('Error al enviar correo:', err);
-    res.status(500).json({ error: 'No se pudo enviar el mensaje. Intenta nuevamente.' });
+    console.error('Error al enviar correo:', err.message);
+    res.status(500).json({
+      error: 'No se pudo enviar el mensaje. Intenta nuevamente.',
+      detail: err.message,
+    });
   }
 });
 

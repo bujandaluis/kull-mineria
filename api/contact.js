@@ -51,7 +51,10 @@ module.exports = async (req, res) => {
     await transporter.sendMail(mailOptions);
     return res.status(200).json({ success: true, message: 'Mensaje enviado correctamente.' });
   } catch (err) {
-    console.error('Error al enviar correo:', err);
-    return res.status(500).json({ error: 'No se pudo enviar el mensaje. Intenta nuevamente.' });
+    console.error('Error al enviar correo:', err.message);
+    return res.status(500).json({
+      error: 'No se pudo enviar el mensaje. Intenta nuevamente.',
+      detail: process.env.NODE_ENV !== 'production' ? err.message : undefined,
+    });
   }
 };
